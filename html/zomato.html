@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zomato-clone</title>
+    <link rel="stylesheet" href="../css/zomato.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-zomato-1937646-1637644.png"/>
+</head>
+<body>
+
+    <!-- home section starts -->
+
+    <section id="home">
+        <section class="wrapper">
+            <header>
+                <h6><a href="getapp.html"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="10" height="10" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 gvsUip"><title>download-app</title><path d="M18.5793 9.18939H16.5865H16.3199C15.7307 9.18939 15.2529 9.6672 15.2529 10.2583V10.3742C15.2529 10.9659 15.7307 11.444 16.3207 11.444H18.3156H18.5793C19.1696 11.444 19.6488 10.9639 19.6488 10.3742L19.6477 10.2569C19.6488 9.6672 19.1696 9.18939 18.5793 9.18939Z"></path><path d="M18.5804 6.52262H18.1097V1.35122C18.1097 0.607964 17.5017 0 16.7582 0H7.84167C7.09841 0 6.49045 0.608249 6.49045 1.35122V5.06151C4.69196 6.07821 2.83696 7.14029 2.83296 7.14286C1.82597 7.5573 0.350586 8.89453 0.350586 12.0522C0.350586 12.3342 0.369139 12.5945 0.395113 12.846C0.40339 12.9197 0.412524 12.9904 0.422514 13.0615C0.448488 13.2462 0.481027 13.4229 0.519845 13.5907C0.533831 13.6506 0.544678 13.7131 0.559805 13.7705C0.612039 13.9646 0.67255 14.1467 0.740482 14.32C0.774733 14.4059 0.811839 14.4841 0.84923 14.5646C0.88919 14.6494 0.929436 14.7327 0.972535 14.8106C1.02249 14.9045 1.07244 14.995 1.12724 15.0809C1.14037 15.1009 1.15464 15.1192 1.16805 15.1394C2.46847 17.1052 4.8675 17.114 4.8675 17.114H6.49045V18.6494C6.49045 19.3918 7.09841 19.9997 7.84167 19.9997H16.7579C17.5014 19.9997 18.1094 19.3915 18.1094 18.6494V16.7767H18.3155V16.7755H18.5784C19.1695 16.7755 19.6487 16.2974 19.6476 15.7063L19.6487 15.5898C19.6476 14.9996 19.1695 14.5229 18.5792 14.5229H18.3155H16.5861H16.3195C15.7292 14.5229 15.2525 15.0007 15.2525 15.5907V15.7091C15.2525 16.2977 15.7304 16.7775 16.3203 16.7775H17.1692V17.5008H7.43036V7.79877C7.91959 7.48851 8.37256 7.18995 8.63088 6.98987C9.93957 5.97774 11.1818 5.17169 11.3499 4.4407C11.5688 3.49222 10.8407 2.69302 9.57765 3.34922C9.17976 3.55587 8.36315 4.00885 7.43036 4.53261V2.14129L17.1692 2.14271V6.52205H16.5861V6.52319H16.3209C15.7304 6.52319 15.2511 7.001 15.2511 7.59269V7.70858C15.2511 8.29999 15.7303 8.77665 16.3195 8.77665H16.5846H18.3141H18.5798C19.1695 8.77665 19.6476 8.29884 19.6476 7.70858V7.58955C19.6487 7.00186 19.1709 6.52262 18.5804 6.52262ZM12.2986 17.9752C12.6731 17.9752 12.9751 18.2774 12.9751 18.6511C12.9751 19.0255 12.6728 19.3267 12.2986 19.3267C11.9256 19.3267 11.6242 19.0247 11.6242 18.6511C11.6247 18.2786 11.927 17.9752 12.2986 17.9752ZM13.7266 1.30098H10.8735C10.7839 1.30098 10.7097 1.2282 10.7097 1.13829C10.7097 1.04695 10.7839 0.974169 10.8735 0.974169H13.7266C13.8163 0.974169 13.8893 1.04667 13.8893 1.13829C13.8893 1.22792 13.8163 1.30098 13.7266 1.30098Z"></path><path d="M18.5788 11.8561H18.3151H16.3193C15.7302 11.8561 15.251 12.3353 15.251 12.9253V13.0423C15.251 13.6329 15.7291 14.1107 16.3193 14.1107H16.5845H18.3139H18.5782C19.1693 14.1107 19.646 13.6329 19.6474 13.0423V12.9253C19.6472 12.3353 19.1705 11.8561 18.5788 11.8561Z"></path></svg>Get the App</a></h6>
+                <nav>
+                    <ul>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Add Restaurants</a></li>
+                        <li id="btn" onclick="displayPop()"><a href="#" >Log In</a></li>
+                        <li id="signbtn" onclick="displaySignup()"><a href="#">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="spotlight">
+                <img src="../images\zomato logo.webp" alt="Zomato-logo"/>
+                <h3>Discover the best food & drinks in <span>Agra</span></h3>
+                <div class="home_input">
+                        <div class="location">
+                            <i class="fa fa-map-marker" title="location-fill"></i>
+                            <input type="text" placeholder="Civil Lines, Agra"/>
+                            <i class="fa fa-caret-down" title="down-triangle" style=" padding-top: 5px; cursor:pointer;color:#776e6e;font-size: 18px;"></i><vr/>
+                        </div>
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="email" placeholder="Search for restaurant, cuisine or a dish"/>
+                        </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section id="pop-cover">
+        <div id="back-space">
+            
+        </div>
+        <div id="pop">
+            <div class="log-head">
+                <h1>Login</h1>
+                <svg id="closePopup" onclick="closePop()" xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="24" height="24" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cdktuZ"><title>cross</title><path d="M11.42 10.42l3.54-3.54c0.38-0.4 0.38-1.040 0-1.42s-1.020-0.4-1.42 0l-3.54 3.54-3.54-3.54c-0.4-0.4-1.020-0.4-1.42 0s-0.38 1.020 0 1.42l3.54 3.54-3.54 3.54c-0.38 0.38-0.38 1.020 0 1.42 0.2 0.18 0.46 0.28 0.72 0.28s0.5-0.1 0.7-0.28l3.54-3.56 3.54 3.56c0.2 0.18 0.46 0.28 0.72 0.28s0.5-0.1 0.7-0.28c0.38-0.4 0.38-1.040 0-1.42l-3.54-3.54z"></path></svg>
+            </div>
+            <div class="select-box">
+                <div class="selected-option" tabindex="0">
+                    <div>
+                        <span class="iconify" data-icon="flag:in-4x3"></span>
+                        <strong>+91</strong>
+                    </div>
+                    <input type="tel" name="tel" placeholder="Phone">
+                </div>
+                <div class="options">
+                    <ol>
+                        
+                    </ol>
+                </div>
+            </div>
+            <div class="otp">
+                <button type="submit">Send One Time Password</button>
+            </div>
+            <div class="or">
+                <p>____________________</p>
+                <h6>or</h6>
+                <p>____________________</p>
+            </div>
+            <div class="easy-login">
+                <button class="click-login">
+                    <i class="fa fa-envelope"></i>
+                    <h6>Continue with Email</h6>
+                </button>
+                <button class="click-login">
+                    <svg width="24" height="24" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z" fill="#FBBB00"></path><path d="M21.8082 8.94507C21.9345 9.61048 22.0004 10.2977 22.0004 11C22.0004 11.7875 21.9176 12.5557 21.7598 13.2967C21.2243 15.8183 19.8252 18.0201 17.8869 19.5782L17.8863 19.5776L14.7477 19.4175L14.3035 16.6445C15.5896 15.8902 16.5947 14.7098 17.1242 13.2967H11.2422V8.94507H17.21H21.8082Z" fill="#518EF8"></path><path d="M17.8865 19.5778L17.8871 19.5784C16.002 21.0937 13.6073 22.0002 11.0006 22.0002C6.81152 22.0002 3.16945 19.6588 1.31152 16.2132L4.87625 13.2952C5.8052 15.7744 8.19679 17.5392 11.0006 17.5392C12.2057 17.5392 13.3348 17.2134 14.3036 16.6447L17.8865 19.5778Z" fill="#28B446"></path><path d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z" fill="#F14336"></path></svg>
+                    <h6>Continue with Google</h6>
+                </button>
+            </div>
+            <div class="create-account">
+                <h6>New to Zomato? <span>Create account</span></h6>
+            </div>
+        </div>
+    </section>
+    <section id="signPop">
+        <div id="back-ground">
+            
+        </div>
+        <div id="signup">
+            <div class="sign-head">
+                <h1>Sign up</h1>
+                <svg id="closeSignup" onclick="closeSignup()" xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="24" height="24" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cdktuZ"><title>cross</title><path d="M11.42 10.42l3.54-3.54c0.38-0.4 0.38-1.040 0-1.42s-1.020-0.4-1.42 0l-3.54 3.54-3.54-3.54c-0.4-0.4-1.020-0.4-1.42 0s-0.38 1.020 0 1.42l3.54 3.54-3.54 3.54c-0.38 0.38-0.38 1.020 0 1.42 0.2 0.18 0.46 0.28 0.72 0.28s0.5-0.1 0.7-0.28l3.54-3.56 3.54 3.56c0.2 0.18 0.46 0.28 0.72 0.28s0.5-0.1 0.7-0.28c0.38-0.4 0.38-1.040 0-1.42l-3.54-3.54z"></path></svg>
+            </div>
+            <div class="name">
+                <form>
+                    <input type="text" id="name" class="details" placeholder="Full Name">
+                    <input type="email" id="email" class="details" placeholder="Email">
+                    <div class="checkbox">
+                        <input id="terms" type="checkbox">
+                        <label for="terms">I agree to Zomato's <span>Terms of Service, Privacy Policy</span> and <span>Content Policies</span></label>
+                        <span class="checkmark"></span>
+                    </div>
+                </form>
+                <button class="create"> Create account</button>
+                <div class="or">
+                    <p>____________________</p>
+                    <h6>or</h6>
+                    <p>____________________</p>
+                </div>
+                <button class="click-login">
+                    <svg width="24" height="24" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z" fill="#FBBB00"></path><path d="M21.8082 8.94507C21.9345 9.61048 22.0004 10.2977 22.0004 11C22.0004 11.7875 21.9176 12.5557 21.7598 13.2967C21.2243 15.8183 19.8252 18.0201 17.8869 19.5782L17.8863 19.5776L14.7477 19.4175L14.3035 16.6445C15.5896 15.8902 16.5947 14.7098 17.1242 13.2967H11.2422V8.94507H17.21H21.8082Z" fill="#518EF8"></path><path d="M17.8865 19.5778L17.8871 19.5784C16.002 21.0937 13.6073 22.0002 11.0006 22.0002C6.81152 22.0002 3.16945 19.6588 1.31152 16.2132L4.87625 13.2952C5.8052 15.7744 8.19679 17.5392 11.0006 17.5392C12.2057 17.5392 13.3348 17.2134 14.3036 16.6447L17.8865 19.5778Z" fill="#28B446"></path><path d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z" fill="#F14336"></path></svg>
+                    <h6>Continue with Google</h6>
+                </button>
+                <div class="exist-account">
+                    <h6>Already have an account? <span>Log in</span></h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section ends -->
+    <!-- services section starts  -->
+
+    <section id="services">
+        <section class="wrapper">
+            <ul>
+                <li>
+                    <a href="order.html">
+                        <div>
+                            <img src="../images\order.webp" alt="Order Online"/>
+                        </div>
+                        <div class="overlap">
+                            <h6>Order Online</h6>
+                            <p>Stay home and order to your doorstep</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html">
+                        <div>
+                            <img src="../images\dining.webp" alt="Dining"/>
+                        </div>
+                        <div class="overlap">
+                            <h6>Dining</h6>
+                            <p>View the city's favorate dining venues</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html">
+                        <div>
+                            <img src="../images\nightlife.webp" alt="Nightlife"/>
+                        </div>
+                        <div class="overlap">
+                            <h6>Nightlife and Clubs</h6>
+                            <p>Explore the city's top nightlife outlets</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <!-- services section ends  -->
+    <!-- collection section starts  -->
+
+    <section id="collections">
+        <section class="wrapper">
+            <div class="top">
+                <h2>Collections</h2>
+                <span><p>Explore curated lists of top restaurants, cafes, pubs and bars in Agra based trends</p><small>All Collections in Agra <i class="fa fa-caret-right"></i></small></span>
+            </div>
+            <div class="down">
+                <ul>
+                    <li>
+                        <a href="order.html">
+                            <div class="places_img">
+                                <img src="../images\collection1.png" alt="Taj View Restaurants"/>
+                            </div>
+                            <div class="overlap1">
+                                <h5>6 Taj View Restaurants</h5>
+                                <p>5 Places <i class="fa fa-caret-right"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <div class="places_img">
+                                <img src="../images\collection2.png" alt="Luxury Dining Places"/>
+                            </div>
+                            <div class="overlap1">
+                                <h5>18 Best Luxury Dining Plac...</h5>
+                                <p>18 Places <i class="fa fa-caret-right"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <div class="places_img">
+                                <img src="../images\collection3.png" alt="Best Mughlai Places"/>
+                            </div>
+                            <div class="overlap1">
+                                <h5>6 Best Mughlai Places</h5>
+                                <p>6 Places <i class="fa fa-caret-right"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <div class="places_img">
+                                <img src="../images\collection4.png" alt="Blissful Breakfast Places"/>
+                            </div>
+                            <div class="overlap1">
+                                <h5>12 Blissful Breakfast Places</h5>
+                                <p>12 Places <i class="fa fa-caret-right"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>       
+    </section>
+
+    <!-- collection section ends -->
+    <!-- localities section starts -->
+
+    <section id="localities">
+        <section class="wrapper">
+            <div class="top">
+                <h1>Popular localities in and around <span>Agra</span></h1>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Tanganj</h5>
+                                <h6>442 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Civil Lines</h5>
+                                <h6>232 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Agra Cantt</h5>
+                                <h6>104 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Sikandra</h5>
+                                <h6>206 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Mantola</h5>
+                                <h6>53 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Khandari</h5>
+                                <h6>107 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Kamla Nagar</h5>
+                                <h6>118 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order.html">
+                            <span>
+                                <h5>Rakabganj</h5>
+                                <h6>77 places</h6>
+                            </span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="seemore">
+                        <a href="#">
+                            <h5>see more <i class="fa fa-angle-down"></i></h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <!-- localities section ends -->
+    <!-- get app section starts -->
+
+    <section id="getapp">
+        <section class="wrapper">
+            <div class="middle">
+                <div class="midleft">
+                    <img src="../images\phone.webp" alt="Get app on mobile"/>
+                </div>
+                <div class="midright">
+                    <h2>Get the Zomato app</h2>
+                    <p>We will send you a link, open it on your phone to download<br/>the app</p>
+                    <div class="select">
+                        <input type="radio" name="email" id="mail" value="Email" checked value="Email"/>
+                        <label for="mail"> Email</label>
+                        <input type="radio" name="email" id="phone" value="Phone"/>
+                        <label for="phone"> Phone</label>
+                    </div>
+                    <div class="fill">
+                        <input type="email" name="email" id="email" placeholder="Email"/>
+                        <input type="submit" name="share" id="share" value="Share App Link"/>
+                    </div>
+                    <h6>Download app from</h6>
+                    <div class="img-container">
+                        <a href="https://bnc.lt/download-z-android" target="_blank"><img src="../images\google play.webp" alt="Google playstore"/></a>
+                        <a href="https://bnc.lt/download-zomato-ios" target="_blank"><img src="../images\appstore.webp" alt="App store"/></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <!-- get app section ends -->
+    <!-- explore section starts -->
+
+    <section id="explore">
+        <section class="wrapper">
+            <div class="nearme">
+                <h3>Explore options near me</h3>
+                <ul>
+                    <li class="toggleList">
+                        <a class="drophead" title="Popular cuisines near me">
+                            <h6>Popular cuisines near me</h6>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div class="toggleContent">
+                            <a href="#">Bakery food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Beverages food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Biryani food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Burger food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Cafe food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Chinese food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Coffee food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Continental food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Desserts food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Gujarati food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Ice Cream food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Italian food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Mughlai food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">North Indian food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Pasta food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Pizza food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Sandwich food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Shake food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">South Indian food near me</a>
+                            <span class="bullet"></span>
+                            <a href="#">Street food near me</a>
+                        </div>
+                    </li>
+                    <li class="toggleList">
+                        <a class="drophead" title="Popular restaurant types near me">
+                            <h6>Popular restaurant types near me</h6>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div class="toggleContent">
+                            <a href="#">Bakeries near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Bars near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Beverages Shops near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Bhojanalya near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Cafés near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Casual Dining near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Dessert Parlors near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Dhabas near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Fine Dining near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Food Courts near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Food Trucks near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Kiosks near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Lounges near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Paan Shop near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Quick Bites near me</a>
+                                <span class="bullet"></span>
+                            <a href="#">Sweet Shops near me</a>
+                        </div>
+                    </li>
+                    <li class="toggleList">
+                        <a class="drophead" title="Top Restaurant Chains">
+                            <h6>Top Restaurant Chains</h6>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div class="toggleContent">
+                                <a href="#">Bikenervala</a>
+                                <a href="#">Burger King</a>
+                                <a href="#">Burger Singh</a>
+                                <a href="#">Dunkin' DonutsK</a>
+                        </div>
+                    </li>
+                    <li class="toggleList">
+                        <a class="drophead" title="Cities We Deliver To">
+                            <h6>Cities We Deliver To</h6>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div class="toggleContent">
+                                <a href="#">Delhi NCR</a> 
+                                <a href="#">Kolkata</a>
+                                <a href="#">Mumbai</a>
+                                <a href="#">Bengaluru</a>
+                                <a href="#">Pune</a>
+                                <a href="#">Hyderabad</a>
+                                <a href="#">Chennai</a>
+                                <a href="#">Lucknow</a>
+                                <a href="#">Kochi</a>
+                                <a href="#">Jaipur</a>
+                                <a href="#">Ahmedabad</a>
+                                <a href="#">Chandigarh</a>
+                                <a href="#">Goa</a>
+                                <a href="#">Indore</a>
+                                <a href="#">Gangtok</a>
+                                <a href="#">Nashik</a>
+                                <a href="#">Ooty</a>
+                                <a href="#">Shimla</a>
+                                <a href="#">Ludhiana</a>
+                                <a href="#">Guwahati</a>
+                                <a href="#">Amritsar</a>
+                                <a href="#">Kanpur</a>
+                                <a href="#">Allahabad</a>
+                                <a href="#">Aurangabad</a>
+                                <a href="#">Bhopal</a>
+                                <a href="#">Ranchi</a>
+                                <a href="#">Visakhapatnam</a>
+                                <a href="#">Bhubaneswar</a>
+                                <a href="#">Coimbatore</a>
+                                <a href="#">Mangalore</a>
+                                <a href="#">Vadodara</a>
+                                <a href="#">Nagpur</a>
+                                <a href="#">Agra</a>
+                                <a href="#">Dehradun</a>
+                                <a href="#">Mysore</a>
+                                <a href="#">Puducherry</a>
+                                <a href="#">Surat</a>
+                                <a href="#">Varanasi</a>
+                                <a href="#">Patna</a>
+                                <a href="#">Udaipur</a>
+                                <a href="#">Srinagar</a>
+                                <a href="#">Khajuraho</a>
+                                <a href="#">Neemrana</a>
+                                <a href="#">Cuttack</a>
+                                <a href="#">Trivandrum</a>
+                                <a href="#">Haridwar</a>
+                                <a href="#">Leh</a>
+                                <a href="#">Pushkar</a>
+                                <a href="#">Rajkot</a>
+                                <a href="#">Madurai</a>
+                                <a href="#">Kozhikode</a>
+                                <a href="#">Alappuzha</a>
+                                <a href="#">Thrissur</a>
+                                <a href="#">Manipal</a>
+                                <a href="#">Vijayawada</a>
+                                <a href="#">Jodhpur</a>
+                                <a href="#">Kota</a>
+                                <a href="#">Ajmer</a>
+                                <a href="#">Mussoorie</a>
+                                <a href="#">Rishikesh</a>
+                                <a href="#">Jalandhar</a>
+                                <a href="#">Jammu</a>
+                                <a href="#">Manali</a>
+                                <a href="#">Dharamshala</a>
+                                <a href="#" style="color:black;text-decoration: underline;">See more</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <!-- explore section ends -->
+    <!-- footer section starts -->
+
+    <footer>
+        <section class="wrapper">
+            <div class="top">
+                <img src="../images\zomato footer.avif" alt="zomato logo"/>
+                <div class="lang">
+                    <ul class="country-flag">
+                        <li class="countries-name">
+                            <div>
+                                <!-- <img src="https://img.icons8.com/color/48/india.png" alt="india"/> -->
+                                <span class="iconify" data-icon="flag:in-4x3"></span>
+                                <p class="name">India </p>
+                                <i class="fa fa-angle-down" title="chevron-down"></i>
+                            </div>
+                        </li>
+                        <div class="country-options">
+                            <ol>
+                                
+                            </ol>
+                            <span class="commentpop"></span>
+                        </div>
+                        <li class="language">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><title>language-globe</title><path d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c-0.011-5.518-4.482-9.989-9.999-10h-0.001zM17.14 6.18h-3c-0.264-1.393-0.63-2.62-1.107-3.791l0.047 0.131c1.755 0.733 3.161 2.010 4.039 3.618l0.021 0.042zM18.1 10c-0.002 0.676-0.090 1.33-0.252 1.954l0.012-0.054h-3.44c0.059-0.57 0.092-1.231 0.092-1.9s-0.034-1.33-0.099-1.982l0.007 0.082h3.44c0.15 0.57 0.238 1.224 0.24 1.899v0.001zM1.9 10c0.002-0.676 0.090-1.33 0.252-1.954l-0.012 0.054h3.46c-0.059 0.57-0.092 1.231-0.092 1.9s0.034 1.33 0.099 1.982l-0.007-0.082h-3.46c-0.15-0.57-0.238-1.224-0.24-1.899v-0.001zM7.48 8.1h5.040c0.063 0.57 0.099 1.231 0.099 1.9s-0.036 1.33-0.107 1.981l0.007-0.081h-5.040c-0.063-0.57-0.099-1.231-0.099-1.9s0.036-1.33 0.107-1.981l-0.007 0.081zM10.76 1.9c0.603 1.228 1.106 2.657 1.436 4.152l0.024 0.128h-4.44c0.354-1.623 0.857-3.052 1.51-4.395l-0.050 0.115c0.24 0 0.5 0 0.76 0s0.48 0 0.76 0zM6.96 2.48c-0.445 1.051-0.825 2.291-1.079 3.576l-0.021 0.124h-3c0.899-1.65 2.305-2.927 4.007-3.64l0.053-0.020zM2.86 13.8h3c0.262 1.4 0.629 2.634 1.107 3.811l-0.047-0.131c-1.757-0.738-3.165-2.022-4.039-3.637l-0.021-0.043zM9.24 18.1c-0.605-1.234-1.108-2.67-1.437-4.172l-0.023-0.128h4.44c-0.352 1.63-0.855 3.066-1.51 4.415l0.050-0.115c-0.24 0-0.5 0-0.76 0s-0.48 0-0.76 0zM13.040 17.52c0.431-1.046 0.798-2.28 1.041-3.558l0.019-0.122h3.040c-0.902 1.642-2.308 2.912-4.006 3.62l-0.054 0.020z"></path></svg>
+                                <p class="lange">English</p>
+                                <i class="fa fa-angle-down" title="chevron-down"></i>
+                            </div>
+                        </li>
+                        <div class="language-options">
+                            <ol>
+
+                            </ol>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <h5>about zomato</h5>
+                        <h6>Who We Are</h6>
+                        <h6>Blog</h6>
+                        <h6>Work With Us</h6>
+                        <h6>Investor</h6>
+                        <h6>Relations</h6>
+                        <h6>Report Fraud</h6>
+                        <h6>Press Kit</h6>
+                        <h6>Contact Us</h6>
+                    </li>
+                    <li>
+                        <h5>zomaverse</h5>
+                        <h6>Zomato</h6>
+                        <h6>Blinkit</h6>
+                        <h6>Feeding India</h6>
+                        <h6>Hyperpure</h6>
+                        <h6>Zomaland</h6>
+                    </li>
+                    <li>
+                        <h5>for restaurants</h5>
+                        <h6>Partner With Us</h6>
+                        <h6>Apps For You</h6>
+                        <h5>for enterprises</h5>
+                        <h6>Zomato For enterprise</h6>
+                    </li>
+                    <li>
+                        <h5>learn more</h5>
+                        <h6>Privacy</h6>
+                        <h6>Security</h6>
+                        <h6>Terms</h6>
+                        <h6>Sitemap</h6>
+                    </li>
+                    <li>
+                        <h5>social links</h5>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/company/zomato" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/zomato/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/zomato" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/zomato" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="https://www.facebook.com/zomato" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                        <div class="downloads">
+                            <a href="https://bnc.lt/download-zomato-ios" target="_blank"><img src="../images\appstore.webp" alt="Download on the App store"/></a>
+                            <a href="https://bnc.lt/download-z-android" target="_blank"><img src="../images\google play.webp" alt="Get it on Google play"/></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 <i class="fa fa-copyright"></i> Zomato<sup>TM</sup> Ltd. All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
+
+    <!-- footer ends -->
+    <script src="../javascript\zomato.js"></script>
+</body>
+</html>
