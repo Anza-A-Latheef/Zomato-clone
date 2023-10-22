@@ -206,11 +206,11 @@ const countries=[
     { name: "Yemen", code: "YE", phone: 967 },
     { name: "Zambia", code: "ZM", phone: 260 },
     { name: "Zimbabwe", code: "ZW", phone: 263 }], 
+
     select_box= document.querySelector('.options'),
-    selected_option= document.querySelector('.selected-option div');
-    
+    selected_option_div= document.querySelector('.selected-option div'),
+    selected_option = document.querySelector('.selected-option');
     let options = null;
-    
     for(country of countries){
         const option = `
         <li class="option">
@@ -223,21 +223,23 @@ const countries=[
     select_box.querySelector('ol').insertAdjacentHTML('beforeend', option)
     options = document.querySelectorAll('.option')
     }
+
     function selectOption(){
         const icon = this.querySelector('.iconify').cloneNode(true),
         phone_code = this.querySelector('strong').cloneNode(true);
-        selected_option.innerHTML='';
-        selected_option.append(icon,phone_code);
+        selected_option_div.innerHTML='';
+        selected_option_div.append(icon,phone_code);
         select_box.classList.remove('active');
-        selected_option.classList.remove('active');
-        select_box.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+        selected_option_div.classList.remove('active');
+        selected_option.classList.add('active')
     }
-    selected_option.addEventListener('click',()=>{
+    selected_option_div.addEventListener('click',()=>{
         select_box.classList.toggle('active');
-        selected_option.classList.toggle('active');
+        selected_option_div.classList.toggle('active');
+        selected_option.classList.add('active')
     })
     options.forEach(option=> option.addEventListener('click',selectOption));
-    
+
     // display login-popup
     function displayPop(){
         document.getElementById("pop-cover").style.display="flex";
@@ -248,6 +250,8 @@ const countries=[
     function closePop(){
         document.getElementById("pop-cover").style.display="none";
         document.body.style.overflow="scroll";
+        select_box.classList.remove('active');
+        selected_option_div.classList.toggle('active');
     };
     //close login-popup while clicking on background
     document.getElementById("back-space").addEventListener('click',closePop);
@@ -255,7 +259,6 @@ const countries=[
     //display signup-popup
     function displaySignup(){
       document.getElementById("signPop").style.visibility="visible";
-      // document.getElementById("signPop").style.transition="0.5s ease-in";
       document.body.style.overflow="hidden";
       document.getElementById("signup").style.transform="scale(1)";
       // document.getElementById("signup").style.transition="1s ease-in";
@@ -263,12 +266,22 @@ const countries=[
   };
   //close signup-popup
   function closeSignup(){
-      // document.getElementById("signPop").style.display="none";
       document.getElementById("signPop").style.visibility="hidden";
       document.body.style.overflow="visible";
   };
   //close signup-popup while clicking on background
   document.getElementById("back-ground").addEventListener('click',closeSignup);
+
+  // create account click
+  document.querySelector(".create-account span").addEventListener('click',()=>{
+      closePop();
+      displaySignup();
+    })
+    //login click
+    document.querySelector(".exist-account span").addEventListener('click',()=>{
+      closeSignup();
+      displayPop();
+    })
 
 //collapsible content
 
@@ -317,40 +330,63 @@ const countryFlag=[
 { country_name: "United Kingdom", code: "GB"},
 { country_name: "USA", code: "US"}],
 country_flag= document.querySelector('.country-options'),
-// country_language=document.querySelector('.language-options'),
-countries_name= document.querySelector('.countries-name div');
+countries_name = document.querySelector('.countries-name'),
+countries_name_div= document.querySelector('.countries-name div');
+
 let countryoptions=null;
-    
-    for(cntry of countryFlag){
-        const cntryoption = `
-        <li class="cntryoption">
+  for(cntry of countryFlag){
+    const cntryoption = `
+      <li class="cntryoption">
         <div>
-            <span class="iconify" data-icon="flag:${cntry.code.toLowerCase()}-4x3"></span>
-            <p class="country-name">${cntry.country_name}</p>
+          <span class="iconify" data-icon="flag:${cntry.code.toLowerCase()}-4x3"></span>
+          <p class="country-name">${cntry.country_name}</p>
         </div>
-    </li>`;
+      </li>`;
     country_flag.querySelector('ol').insertAdjacentHTML('beforeend', cntryoption)
     countryoptions = document.querySelectorAll('.cntryoption')
     }
-    function selectCountry(){
-      const iconifyElement = this.querySelector('.iconify');
-      const dataIconValue = iconifyElement.getAttribute('data-icon');
-      const name = this.querySelector('.country-name').cloneNode(true);
-        tags = `
-        <!-- <img src="https://img.icons8.com/color/48/india.png" alt="india"/> -->
-        <span class="iconify" data-icon="${dataIconValue}"></span>
-        <p class="name">${name.textContent}</p>
-        <i class="fa fa-angle-down" title="chevron-down"></i>`;
-        countries_name.innerHTML='';
-        countries_name.innerHTML=tags;
-        // countries_name.append(flag,name);
-        country_flag.classList.toggle('active');
-        countries_name.classList.toggle('active');
-        // country_flag.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+function selectCountry(){
+  const iconifyElement = this.querySelector('.iconify');
+  const dataIconValue = iconifyElement.getAttribute('data-icon');
+  const name = this.querySelector('.country-name').cloneNode(true);
+    tags = `
+      <span class="iconify" data-icon="${dataIconValue}"></span>
+      <p class="name">${name.textContent}</p>
+      <i class="fa fa-angle-down" title="chevron-down"></i>`;
+      countries_name.innerHTML='';
+      countries_name.innerHTML=tags;
+      country_flag.classList.toggle('active');
+      countries_name.classList.toggle('active');
     }
     countries_name.addEventListener('click',()=>{
         country_flag.classList.toggle('active');
-        countries_name.classList.toggle('active');
+        countries_name_div.classList.toggle('active');
     })
     const countryOptions = document.querySelectorAll('.cntryoption');
     countryOptions.forEach(cntryoption=> cntryoption.addEventListener('click',selectCountry));
+  //   window.addEventListener('click',(e)=>{
+  //     if(e.target !== countries_name && countries_name_div.classList.contains('active')){
+
+  //     // country_flag.classList.remove('active');
+  //     // countries_name_div.classList.remove('active');
+  //     }
+  // })
+
+  // window.addEventListener('click', (event) => {
+    // // Get the selected option element.
+    //   const selectedOptionElement = document.querySelector('.selected-option');
+    
+    // // If the event target is not the input element or the selected option element, then remove the style.
+    //   if (event.target !== selectedOptionElement && event.target !== selectedOptionElement.querySelector('input[type="tel"]')) {
+    //     selectedOptionElement.style.outline = '';
+    //     selectedOptionElement.style.border = '';
+    //   }
+    // });
+
+
+//language selection option
+
+// const Languages=["English","Türkçe","हिंदी","Português (BR)","Indonesian","Português (PT)","Español","Čeština","Slovenčina","Polish","Italian","Vietnamese"];
+// for(i=0;i<=Languages.length;i++){
+//   document.(Languages[i]);
+// }

@@ -62,6 +62,7 @@
     font-weight: lighter;
     cursor: pointer;
 }
+/* popup contents styling */
 #pop-cover {
     background-color: rgba(24, 19, 19, 0.795);
     width: 100%;
@@ -119,10 +120,7 @@
     border: .1rem solid transparent;
     outline: none;
 }
-#pop-cover  #pop .select-box .selected-option input[type="tel"]:focus{
-    outline: none;
-    border: cadetblue 2px solid;
-}
+
 #pop-cover  #pop .select-box .selected-option{
     border-radius: 5px;
     display: flex;
@@ -131,13 +129,14 @@
     width: 100%;
     outline: #cccccc 1px solid;
 }
-#pop-cover  #pop .select-box .selected-option:focus{
+#pop-cover  #pop .select-box .selected-option.active{
     outline: none;
     border: cadetblue 2px solid;
 }
 #pop-cover  #pop .select-box .selected-option div{
     display: flex;
     width: 120px;
+    padding-right: 14px;
     padding-left: 10px;
     text-align: center;
     cursor: pointer;
@@ -154,6 +153,7 @@
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     transition: .2s;
+    margin-left: 10px;
 }
 #pop-cover  #pop .select-box .selected-option div.active::after{
     transform: rotate(225deg);
@@ -282,9 +282,6 @@
     top:0;
     left: 0;
     height: 100vh;
-    /* display: block; */
-    /* transform: translate(0);
-    transition: transform 0.25s ease 0s; */
 }
 #signPop #back-ground{
     width: 100vw;
@@ -297,7 +294,6 @@
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     height: max-content;
-    /* display: block; */
     position: fixed;
     top: 10%;
     left: 35%;
@@ -363,14 +359,21 @@
     margin-bottom: 10px;
 }
 #signPop #signup .name form div.checkbox input{
-    border: #cccccc 2px solid;
+    border: #cccccc 1px solid;
+    outline: none;
     width: 18px;
-    height: 18px;
+    height: 16px;
     margin-right: 10px;
 }
-#signPop #signup .name form div.checkbox:hover input ~ .checkmark{
-    border-color: #e03546;
-}
+/* #signPop #signup .name form div.checkbox input:focus{
+    border:none;
+    outline: 1px solid #ef4f5f;
+    accent-color: white;
+    
+} */
+/* #signPop #signup .name form div.checkbox:hover input ~ .checkmark{
+    outline:1px solid #e03546;
+} */
 #signPop #signup .name form div.checkbox label{
     font-size: 13px;
     font-weight: 500;
@@ -993,6 +996,7 @@ footer .wrapper .top .lang ul.country-flag .country-options{
     border-radius: .5rem;
     bottom:94%;
     right: 40%;
+    box-shadow: 0 4px 22px 0 #0d02028a, 0 6px 20px 0 #63606033;
     display: none;
 }
 footer .wrapper .top .lang ul.country-flag .country-options.active{
@@ -1461,33 +1465,33 @@ footer .wrapper .copyright sup{
     border-radius: 15px;
 }
 #agrafood .wrapper .food-online ul li a .food-images .offer small{
+    display: flex;
+    align-items: center;
     width: min-content;
     height: 5px;
-    border-radius: 2px;
-    align-items: center;
-    padding: 3px;
-    display: flex;
-    color: #ffffff;
-    background-color: #3d3b3b;
-    opacity: 0.5;
-    font-size: 10px;
-    margin: 20px;
     position: absolute;
     top:0;
     left:0;
+    padding: 3px;
+    margin: 20px;
+    font-size: 10px;
+    color: #ffffff;
+    border-radius: 2px;
+    background-color: #3d3b3b;
+    opacity: 0.5;
 }
 #agrafood .wrapper .food-online ul li a .food-images .offer span{
-    font-size: 13px;
-    margin-left:10px;
-    margin-bottom:15px;
-    line-height: 20px;
-    padding: 0px 0.6rem;
-    background: rgb(37, 111, 239);
-    color: rgb(255, 255, 255);
-    border-radius: 0px 0.2rem 0.2rem 0px;
     position: absolute;
     bottom:0;
     left:0;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 20px;
+    margin-left:10px;
+    margin-bottom:15px;
+    padding: 0px 0.6rem;
+    background: #256fef;
+    border-radius: 0px 0.2rem 0.2rem 0px;
 }
 #agrafood .wrapper .food-online ul li a .rating{
     width: 95%;
@@ -1506,13 +1510,13 @@ footer .wrapper .copyright sup{
     color: #ffffff;
     display: flex;
     align-items: center;
-    background-color: rgb(38, 126, 62);
+    background-color: #267e3e;
     height: 8px;
     padding: 5px;
     font-size: 12px;
     font-weight: 600;
     border-radius: 5px;
-    border: 1px solid rgb(38, 126, 62);
+    border: 1px solid #267e3e;
 }
 #agrafood .wrapper .food-online ul li a .rating h6 i{
     color: white;
