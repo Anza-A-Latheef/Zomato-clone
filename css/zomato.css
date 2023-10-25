@@ -73,6 +73,7 @@
     top:0;
     left: 0;
     height: 100vh;
+    z-index: 1;
 }
 #pop-cover  #back-space{
     width: 100vw;
@@ -1353,10 +1354,10 @@ footer .wrapper .copyright sup{
     font-size: 20px;
     font-weight: 500;
 }
-#inspiration .wrapper .slider{
+#inspiration .wrapper .slider-sec .slider-right{
     width:32px;
     height: 30px;
-    padding: 2px;
+    margin: 2px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 #64626233, 0 6px 20px 0 #63606033;
     border-radius: 50%;
@@ -1366,11 +1367,35 @@ footer .wrapper .copyright sup{
     position: absolute;
     right: 0;
 }
-#inspiration .wrapper .slider:hover{
+#inspiration .wrapper .slider-sec .slider-right:hover{
     cursor: pointer;
     background-color: #f8f8f8 ;
 }
-#inspiration .wrapper i{
+#inspiration .wrapper .slider-sec .slider-right i{
+    font-size: 22px;
+    font-weight: 500;
+} 
+#inspiration .wrapper .slider-sec .slider-left{
+    width:32px;
+    height: 30px;
+    margin: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 #64626233, 0 6px 20px 0 #63606033;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -40px;
+}
+#inspiration .wrapper .slider-sec .slider-left:hover{
+    cursor: pointer;
+    background-color: #f8f8f8 ;
+}
+#inspiration .wrapper .slider-sec .slider-left:active{
+    border:#f5b8bd 3px solid;
+}
+#inspiration .wrapper .slider-sec .slider-left i{
     font-size: 22px;
     font-weight: 500;
 } 
@@ -1406,6 +1431,7 @@ footer .wrapper .copyright sup{
     height: 250px;
 }
 #brands .wrapper .top-brand ul li img{
+    z-index: 0;
     border-radius: 100%;
     width: 160px;
     height: 160px;

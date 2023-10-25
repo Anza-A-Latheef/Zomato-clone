@@ -1,4 +1,3 @@
-
 const countries=[
     { name: "Afghanistan", code: "AF", phone: 93 },
     { name: "Albania", code: "AL", phone: 355 },
@@ -387,7 +386,47 @@ function selectCountry(){
 
 //language selection option
 
-// const Languages=["English","Türkçe","हिंदी","Português (BR)","Indonesian","Português (PT)","Español","Čeština","Slovenčina","Polish","Italian","Vietnamese"];
-// for(i=0;i<=Languages.length;i++){
-//   document.(Languages[i]);
-// }
+const Languages=["English","Türkçe","हिंदी","Português (BR)","Indonesian","Português (PT)","Español","Čeština","Slovenčina","Polish","Italian","Vietnamese"];
+const country_lang= document.querySelector('.language-options'),
+language_name = document.querySelector('.language'),
+language_div= document.querySelector('.language div');
+
+let languageoptions=null;
+for(i=0;i<
+  Languages.length;i++){
+  const langsoption=`
+    <li class="langsoption">
+      <div>
+        <span>${Languages[i]}</span>
+      </div>
+    </li>`
+  // for(cntry of countryFlag){
+  //   const cntryoption = `
+  //     <li class="cntryoption">
+  //       <div>
+  //         <span class="iconify" data-icon="flag:${cntry.code.toLowerCase()}-4x3"></span>
+  //         <p class="country-name">${cntry.country_name}</p>
+  //       </div>
+  //     </li>`;
+    country_lang.querySelector('ol').insertAdjacentHTML('beforeend', langsoption)
+    languageoptions = document.querySelectorAll('.langsoption')
+    }
+// function selectCountry(){
+//   const iconifyElement = this.querySelector('.iconify');
+//   const dataIconValue = iconifyElement.getAttribute('data-icon');
+//   const name = this.querySelector('.country-name').cloneNode(true);
+//     tags = `
+//       <span class="iconify" data-icon="${dataIconValue}"></span>
+//       <p class="name">${name.textContent}</p>
+//       <i class="fa fa-angle-down" title="chevron-down"></i>`;
+//       countries_name.innerHTML='';
+//       countries_name.innerHTML=tags;
+//       country_flag.classList.toggle('active');
+//       countries_name.classList.toggle('active');
+//     }
+//     countries_name.addEventListener('click',()=>{
+//         country_flag.classList.toggle('active');
+//         countries_name_div.classList.toggle('active');
+//     })
+//     const countryOptions = document.querySelectorAll('.cntryoption');
+//     countryOptions.forEach(cntryoption=> cntryoption.addEventListener('click',selectCountry));
