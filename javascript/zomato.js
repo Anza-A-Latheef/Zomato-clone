@@ -364,6 +364,7 @@ function selectCountry(){
     })
     const countryOptions = document.querySelectorAll('.cntryoption');
     countryOptions.forEach(cntryoption=> cntryoption.addEventListener('click',selectCountry));
+    
   //   window.addEventListener('click',(e)=>{
   //     if(e.target !== countries_name && countries_name_div.classList.contains('active')){
 
