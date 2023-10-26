@@ -420,3 +420,44 @@ for(i=0;i<
     })
     const languageOptions = document.querySelectorAll('.langsoption');
     languageOptions.forEach(langsoption=> langsoption.addEventListener('click',selectLanguage));
+
+//get app input change
+const email_change=`
+  <input type="email" name="email" id="email" placeholder="Email"/>
+  <input type="submit" name="share" id="share" value="Share App Link"/>`;
+const phone_change=`
+	<div class="customphone">
+    	<div class="phonecode">
+            <select>
+                <option value="0">+91</option>
+                <option value="1">+60</option>
+                <option value="2">+63</option>
+                <option value="3">+94</option>
+                <option value="4">+56</option>
+                <option value="5">+1</option>
+                <option value="6">+64</option>
+                <option value="7">+27</option>
+                <option value="8">+353</option>
+                <option value="9">+44</option>
+                <option value="10">+971</option>
+                <option value="11">+420</option>
+                <option value="12">+351</option>
+            </select>
+    	</div>
+        <input type="phone" placeholder="Phone"/>
+        <input type="submit" name="share" id="share" value="Share App Link"/>
+    </div>`;
+
+    // get input select
+const custom_fill=document.getElementsByClassName('fill');
+const mail_input=document.getElementById('mail');
+const custom_select=document.getElementsByClassName('select');
+
+custom_select[0].addEventListener('click',()=>{
+  if(mail_input.checked==true){
+    custom_fill[0].innerHTML=email_change;
+  }
+  else{
+    custom_fill[0].innerHTML=phone_change;
+  }
+})

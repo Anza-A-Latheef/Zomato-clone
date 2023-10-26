@@ -31,3 +31,20 @@ for(i=1;i<=30;i++){
             <span>20% OFF</span>`
     }
     }
+
+// Get the button
+let mybutton = document.getElementById("myBtn");
+// When scrolls down show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 2000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// clicks on the button, scroll to the top
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
