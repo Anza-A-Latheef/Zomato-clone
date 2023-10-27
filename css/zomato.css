@@ -155,7 +155,7 @@ color: rgb(255, 255, 255);
 }
 #pop-cover  #pop .select-box .selected-option.active{
     outline: none;
-    border: cadetblue 2px solid;
+    border: #5f9ea0 2px solid;
 }
 #pop-cover  #pop .select-box .selected-option div{
     display: flex;
@@ -350,34 +350,44 @@ color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
 }
-#signPop #signup .name form input{
+#signPop #signup .name form .signupBox{
+    position: relative;
+    width: 100%;
+}
+#signPop #signup .name form .signupBox input{
+    padding: 10px;
+    /* transition: 0.5s; */
     width: 95%;
-    height: 47px;
+    height: 27px;
     border: #cccccc 1px solid;
     border-radius: 5px;
     outline: none;
     margin-bottom: 25px;
     padding-left: 15px;
 }
-#signPop #signup .name form input::placeholder{
+#signPop #signup .name form .signupBox p{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding:10px;
+    pointer-events: none;
     font-size: 19px;
     color: #cccccc;
     font-weight: 300;
 }
-/* #signPop #signup .name form fieldset{
-    width: 100%;
-    height:50px;
-    border:#cccccc 1px solid;
-    border-radius: 5px;
-    outline: none;
-    padding: 10px;
-    margin-bottom: 25px;
+#signPop #signup .name form .signupBox input:valid ~p,
+#signPop #signup .name form .signupBox input:focus ~p{
+    color: #5f9ea0 ;
+    transform: translateX(10px) translateY(-5px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    transition: 0.5s;
+    background: white;
 }
-#signPop #signup .name form fieldset legend{
-    float: left;
-    font-size: 19px;
-    color:#cccccc;
-} */
+#signPop #signup .name form .signupBox input:valid,
+#signPop #signup .name form .signupBox input:focus{
+    border:1px solid #5f9ea0 ;
+}
 #signPop #signup .name form div.checkbox{
     display: flex;
     justify-content: space-between;
