@@ -394,26 +394,22 @@ color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 #signPop #signup .name form div.checkbox input[type="checkbox"]{
-    border: #cccccc 1px solid;
-    /* outline: none; */
     width: 18px;
     height: 16px;
+    outline: blue solid 2px;
     margin-right: 10px;
-    outline: transparent
+    accent-color: white; 
 }
-#signPop #signup .name form div.checkbox input[type="checkbox"]:hover{
-    accent-color: blue;
-    background-color: red;
-}
-#signPop #signup .name form div.checkbox input[type="checkbox"]:focus{
-    border:none;
-    outline: 1px solid #ef4f5f;
-    accent-color: white;
-    
+#signPop #signup .name form div.checkbox input[type="checkbox"]:checked{
+    outline: 2px solid #ef4f5f;
+    accent-color: white; 
 } 
  /* #signPop #signup .name form div.checkbox:hover input[type="checkbox"] ~ .checkmark{
     outline:1px solid #e03546;
 } */
+.checkbox .checkmark:after{
+    color: red;
+}
 
 #signPop #signup .name form div.checkbox label{
     font-size: 13px;
