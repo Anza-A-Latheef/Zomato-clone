@@ -342,7 +342,6 @@ let countryoptions=null;
         </div>
       </li>`;
     country_flag.querySelector('ol').insertAdjacentHTML('beforeend', cntryoption)
-    countryoptions = document.querySelectorAll('.cntryoption')
     }
 function selectCountry(){
   const iconifyElement = this.querySelector('.iconify');
@@ -373,15 +372,15 @@ function selectCountry(){
   // })
 
   // window.addEventListener('click', (event) => {
-    // // Get the selected option element.
-    //   const selectedOptionElement = document.querySelector('.selected-option');
+  //   // Get the selected option element.
+  //     const selectedOptionElement = document.querySelector('.selected-option');
     
-    // // If the event target is not the input element or the selected option element, then remove the style.
-    //   if (event.target !== selectedOptionElement && event.target !== selectedOptionElement.querySelector('input[type="tel"]')) {
-    //     selectedOptionElement.style.outline = '';
-    //     selectedOptionElement.style.border = '';
-    //   }
-    // });
+  //   // If the event target is not the input element or the selected option element, then remove the style.
+  //     if (event.target !== selectedOptionElement && event.target !== selectedOptionElement.querySelector('input[type="tel"]')) {
+  //       selectedOptionElement.style.outline = '';
+  //       selectedOptionElement.style.border = '';
+  //     }
+  //   });
 
 
 //language selection option

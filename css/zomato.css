@@ -1447,41 +1447,41 @@ footer .wrapper .copyright sup{
     font-weight: 500;
     letter-spacing: 1px;
 }
-#inspiration .wrapper .slider-sec{
+#inspiration .wrapper #slider-sec{
     display: flex;
     position: relative;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-#inspiration .wrapper .slider-sec ul{
+#inspiration .wrapper #slider-sec ul#slider-content{
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     width: 100%;
 }
-#inspiration .wrapper .slider-sec ul li{
+#inspiration .wrapper #slider-sec ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 35px;
 }
-#inspiration .wrapper .slider-sec ul li img{
+#inspiration .wrapper #slider-sec ul li img{
     border-radius: 50%;
-    width: 160px;
-    height: 160px;
+    width: 156px;
+    height: 158px;
     padding-top: 30px;
     padding-bottom: 10px;
     cursor: pointer;
     z-index: 0;
 }
-#inspiration .wrapper .slider-sec ul li h5{
+#inspiration .wrapper #slider-sec ul li h5{
     color:#363636;
     font-size: 20px;
     font-weight: 500;
 }
-#inspiration .wrapper .slider-sec .slider-right{
+#inspiration .wrapper #slider-sec #slider-right{
     width:32px;
     height: 30px;
     margin: 2px;
@@ -1494,18 +1494,18 @@ footer .wrapper .copyright sup{
     position: absolute;
     right: 0;
 }
-#inspiration .wrapper .slider-sec .slider-right:hover{
+#inspiration .wrapper #slider-sec #slider-right:hover{
     cursor: pointer;
     background-color: #f8f8f8 ;
 }
-#inspiration .wrapper .slider-sec .slider-right:active{
+#inspiration .wrapper #slider-sec #slider-right:active{
     outline:#f5b8bd 2px solid;
 }
-#inspiration .wrapper .slider-sec .slider-right i{
+#inspiration .wrapper #slider-sec #slider-right i{
     font-size: 22px;
     font-weight: 500;
 } 
-#inspiration .wrapper .slider-sec .slider-left{
+#inspiration .wrapper #slider-sec #slider-left{
     width:32px;
     height: 30px;
     margin: 2px;
@@ -1516,17 +1516,17 @@ footer .wrapper .copyright sup{
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -40px;
-    display: none;
+    left: -18px;
+    z-index: 1;
 }
-#inspiration .wrapper .slider-sec .slider-left:hover{
+#inspiration .wrapper #slider-sec #slider-left:hover{
     cursor: pointer;
     background-color: #f8f8f8 ;
 }
-#inspiration .wrapper .slider-sec .slider-left:active{
+#inspiration .wrapper #slider-sec #slider-left:active{
     outline:#f5b8bd 2px solid;
 }
-#inspiration .wrapper .slider-sec .slider-left i{
+#inspiration .wrapper #slider-sec #slider-left i{
     font-size: 22px;
     font-weight: 500;
 } 

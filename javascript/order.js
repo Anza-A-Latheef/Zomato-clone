@@ -32,7 +32,7 @@ for(i=1;i<=30;i++){
     }
     }
 
-// Get the button
+// Get the button for vertical scroll
 let mybutton = document.getElementById("myBtn");
 // When scrolls down show the button
 window.onscroll = function() {scrollFunction()};
@@ -48,3 +48,19 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//hozizontal scroll
+
+const buttonRight = document.getElementById('slider-right');
+const buttonLeft = document.getElementById('slider-left');
+if (document.body.scrollRight < 2000){
+  buttonLeft.style.display = "block";
+} else {
+  buttonLeft.style.display = "none";
+}
+buttonRight.onclick = function () {
+  document.getElementById('slider-content').scrollLeft += 200;
+};
+buttonLeft.onclick = function () {
+  document.getElementById('slider-content').scrollLeft -= 200;
+};
