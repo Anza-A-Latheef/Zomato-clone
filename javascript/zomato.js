@@ -362,26 +362,6 @@ function selectCountry(){
     })
     const countryOptions = document.querySelectorAll('.cntryoption');
     countryOptions.forEach(cntryoption=> cntryoption.addEventListener('click',selectCountry));
-    
-  //   window.addEventListener('click',(e)=>{
-  //     if(e.target !== countries_name && countries_name_div.classList.contains('active')){
-
-  //     // country_flag.classList.remove('active');
-  //     // countries_name_div.classList.remove('active');
-  //     }
-  // })
-
-  // window.addEventListener('click', (event) => {
-  //   // Get the selected option element.
-  //     const selectedOptionElement = document.querySelector('.selected-option');
-    
-  //   // If the event target is not the input element or the selected option element, then remove the style.
-  //     if (event.target !== selectedOptionElement && event.target !== selectedOptionElement.querySelector('input[type="tel"]')) {
-  //       selectedOptionElement.style.outline = '';
-  //       selectedOptionElement.style.border = '';
-  //     }
-  //   });
-
 
 //language selection option
 
@@ -391,8 +371,7 @@ language_name = document.querySelector('.language'),
 language_div= document.querySelector('.language div');
 
 let languageoptions=null;
-for(i=0;i<
-  Languages.length;i++){
+for(i=0;i<Languages.length;i++){
   const langsoption=`
     <li class="langsoption">
       <div>
