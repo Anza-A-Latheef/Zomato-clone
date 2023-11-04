@@ -53,14 +53,13 @@ function topFunction() {
 
 const buttonRight = document.getElementById('slider-right');
 const buttonLeft = document.getElementById('slider-left');
-if (document.body.scrollRight < 2000){
-  buttonLeft.style.display = "block";
-} else {
-  buttonLeft.style.display = "none";
-}
 buttonRight.onclick = function () {
   document.getElementById('slider-content').scrollLeft += 200;
+  buttonLeft.style.display = "flex";
 };
 buttonLeft.onclick = function () {
   document.getElementById('slider-content').scrollLeft -= 200;
+  if(document.getElementById('slider-content').scrollLeft ==0){
+    buttonLeft.style.display = "none";
+  }
 };
