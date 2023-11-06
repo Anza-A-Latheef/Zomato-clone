@@ -293,11 +293,11 @@ color: rgb(255, 255, 255);
     font-weight: lighter;
 }
 #pop-cover  #pop .create-account h6 span{
-    color: #ef4f5f;
+    color: #330207;
     cursor: pointer;
 }
 #signPop{
-    background-color: rgba(24, 19, 19, 0.795);
+    background-color: #181313cb;
     width: 100%;
     position: fixed;
     visibility: hidden;

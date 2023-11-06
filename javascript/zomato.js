@@ -271,6 +271,32 @@ const countries=[
   //close signup-popup while clicking on background
   document.getElementById("back-ground").addEventListener('click',closeSignup);
 
+  
+// //login page phone number checking```
+
+const predefinedPhoneNumbers = ['123-456-7890', '987-654-3210', '555-555-5555','8289951427','9495301427','8078006686','8589830874'];
+localStorage.setItem('phoneNumbers', JSON.stringify(predefinedPhoneNumbers));
+ document.getElementById('checkButton').addEventListener('click', function () {
+	const enteredPhoneNumber = document.getElementById('phoneNumberInput').value;
+	const phoneNumbers = JSON.parse(localStorage.getItem('phoneNumbers'));
+
+	if (phoneNumbers && phoneNumbers.includes(enteredPhoneNumber)) {
+	  window.location.href = 'order.html';
+	} 
+  else if(!enteredPhoneNumber){
+	  // alert('Please enter a phone number');
+    document.getElementById("alert").innerHTML="Please enter a phone number!!! ";
+    document.getElementById("alert").style.color="Red";
+    document.getElementById("alert").style.fontSize="10px";
+  }
+  else {
+	  // alert('Phone number not exist. Please try again.');
+    document.getElementById("alert").innerHTML="Phone number not exist. Please try again";
+    document.getElementById("alert").style.color="Red";
+    document.getElementById("alert").style.fontSize="10px";
+	}
+  });
+
   // create account click
   document.querySelector(".create-account span").addEventListener('click',()=>{
       closePop();

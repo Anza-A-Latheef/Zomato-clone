@@ -63,3 +63,4 @@ buttonLeft.onclick = function () {
     buttonLeft.style.display = "none";
   }
 };
+
