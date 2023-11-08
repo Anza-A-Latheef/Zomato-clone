@@ -669,12 +669,10 @@ color: rgb(255, 255, 255);
     width:100%;
 }
 #collections .wrapper .down ul{
-    display: flex;
     width: 100%;
     justify-content: space-between;
 }
 #collections .wrapper .down ul li{
-    width: 24.5%;
     list-style: none;
     display: block;
 }
@@ -1350,7 +1348,7 @@ footer .wrapper .copyright sup{
     font-size: 13px;
     padding-top: 20px;
 }
-#orderhome .wrapper .subline ul{
+#orderhome .wrapper .tab-head ul.tab_select{
     margin-left: 10px;
     display: flex;
     width: 45%;
@@ -1358,49 +1356,52 @@ footer .wrapper .copyright sup{
     cursor: pointer;
     border-bottom: #d1cccc 2px solid;
 }
-#orderhome .wrapper .subline ul .order-option{
+#orderhome .wrapper .tab-head ul.tab_select{
     display: flex;    
     padding-bottom: 20px;
 }
-#orderhome .wrapper .subline ul .order-option a{
+#orderhome .wrapper .tab-head ul.tab_select .order-option a{
     display: flex;
     align-items: center;
 }
-#orderhome .wrapper .subline ul .order-option a .short-container{
+#orderhome .wrapper .tab-head ul.tab_select .order-option a .short-container{
     background-color:#fceec0;
     border-radius: 100%;
     padding: 10px;
     margin-right: 10px;
 }
-#orderhome .wrapper .subline ul .order-option a .short-container img{
+#orderhome .wrapper .tab-head ul.tab_select .order-option a .short-container img{
     width: 35px;
     height:30px;
 }
-#orderhome .wrapper .subline ul .order-option a h6{
+#orderhome .wrapper .tab-head ul.tab_select .order-option a h6{
     color:#ef4f5f;
     font-size: 19px;
     font-weight: 500;
 }
-#orderhome .wrapper .subline ul .order-options{
+#orderhome .wrapper .tab-head ul.tab_select .order-options{
     display: flex;
     padding-bottom: 20px;
 }
-#orderhome .wrapper .subline ul .order-options a{
+#orderhome .wrapper .tab-head ul.tab_select .order-options a{
     display: flex;
     align-items: center;
 }
-#orderhome .wrapper .subline ul .order-options a .short-container-one{
-    background-color: #f8f2f2;
+#orderhome .wrapper .tab-head ul.tab_select .order-options a .short-container-one{
+    background-color: #edf4ff;
     border-radius: 100%;
     padding: 10px;
     margin-right: 10px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
-#orderhome .wrapper .subline ul .order-options a .short-container-one img{
+#orderhome .wrapper .tab-head ul.tab_select .order-options a .short-container-one img{
     width: 35px;
     height:30px;
 }
-#orderhome .wrapper .subline ul .order-options a h6{
+#orderhome .wrapper .tab-head ul.tab_select .order-options a h6{
     color: #8b8585;
+    /* color:#ef4f5f; */
     font-size: 19px;
     font-weight: 500;
 }

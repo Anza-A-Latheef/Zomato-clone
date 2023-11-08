@@ -327,6 +327,7 @@ for (let i = 0; i <= coll.length -1; i++) {
   });
 }
 
+
 //country selection in footer section
 
 const countryFlag=[
@@ -464,4 +465,13 @@ custom_select[0].addEventListener('click',()=>{
   else{
     custom_fill[0].innerHTML=phone_change;
   }
+})
+
+// slider section
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    items:4,
+});
 })
