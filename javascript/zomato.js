@@ -457,7 +457,6 @@ const phone_change=`
 const custom_fill=document.getElementsByClassName('fill');
 const mail_input=document.getElementById('mail');
 const custom_select=document.getElementsByClassName('select');
-
 custom_select[0].addEventListener('click',()=>{
   if(mail_input.checked==true){
     custom_fill[0].innerHTML=email_change;

@@ -1,37 +1,39 @@
-north_indian_foods = ["Butter Chicken", "Paneer Tikka", "Chole Bhature", "Tandoori Chicken", "Aloo Paratha", "Palak Paneer", "Rajma Chawal", "Aloo Tikki", "Dal Makhani", "Pani Puri", "Samosa", "Matar Paneer", "Baingan Bharta", "Chicken Tikka Masala", "Kadai Paneer", "Murg Malaiwala", "Tandoori Roti", "Pulao", "Rogan Josh", "Biryani", "Lassi", "Gajar Ka Halwa", "Pakoras", "Kheer", "Aloo Gobi", "Dahi Vada", "Shahi Tukda", "Chana Masala", "Malai Kofta", "Pav Bhaji", "Ice Desserts"]
-for(i=1;i<=30;i++){  
-    document.getElementById("grid-items").innerHTML+=`
-    <li>
-        <a href="#">
-            <div class="food-images">
-                <img src="../images/${"res"+i}.avif" alt="North-indian food"/>
-                <div class="offer">
-                    
-                </div>
-            </div>
-            <div class="rating">
-                <h5>${north_indian_foods[i]}</h5>
-                <h6>3.9 <i class="fa fa-star"></i></h6>
-            </div>
-            <div class="food-type">
-                <span>North Indian</span>
-                <p>&#8377;250 for one</p>
-            </div>
-            <small>16 min</small>
-            <div class="delivery-condition">
-                <img src="../images/maxsafety.webp" alt=""/>
-                <p>Follows all Max Safety measures to ensure your food is safe</p>
-            </div>
-        </a>
-    </li>`
-    if (i<=6){
-        const collection = document.getElementsByClassName("offer");
-        collection[i-1].innerHTML =`
-            <small>Promoted</small>
-            <span>20% OFF</span>`
+north_indian_foods = ["Butter Chicken", "Paneer Tikka", "Chole Bhature", "Tandoori Chicken", "Aloo Paratha", "Palak Paneer", "Rajma Chawal", "Aloo Tikki", "Dal Makhani", "Pani Puri", "Samosa", "Matar Paneer", "Baingan Bharta", "Chicken Tikka Masala", "Kadai Paneer", "Murg Malaiwala", "Tandoori Roti", "Pulao", "Rogan Josh", "Biryani", "Lassi", "Gajar Ka Halwa", "Pakoras", "Kheer", "Aloo Gobi", "Dahi Vada", "Shahi Tukda", "Chana Masala", "Malai Kofta", "Pav Bhaji", "Ice Desserts"];
+const nodeList=document.querySelectorAll(".grid-items");
+for(let j=0;j<nodeList.length;j++){  
+	for(let i=1;i<=30;i++){  
+    	nodeList[j].innerHTML+=`
+    	<li>
+    	    <a href="#">
+    	        <div class="food-images">
+    	            <img src="../images/${"res"+i}.avif" alt="North-indian food"/>
+    	            <div class="offer">
+		
+    	            </div>
+    	        </div>
+    	        <div class="rating">
+    	            <h5>${north_indian_foods[i]}</h5>
+    	            <h6>3.9 <i class="fa fa-star"></i></h6>
+    	        </div>
+    	        <div class="food-type">
+    	            <span>North Indian</span>
+    	            <p>&#8377;250 for one</p>
+    	        </div>
+    	        <small>16 min</small>
+    	        <div class="delivery-condition">
+    	            <img src="../images/maxsafety.webp" alt=""/>
+    	            <p>Follows all Max Safety measures to ensure your food is safe</p>
+    	        </div>
+    	    </a>
+    	</li>`
+    	if (i<=6){
+    	    const collection = document.getElementsByClassName("offer");
+    	    collection[i-1].innerHTML =`
+    	        <small>Promoted</small>
+    	        <span>20% OFF</span>`
+    	}
     }
-    }
-
+}
 // Get the button for vertical scroll
 let mybutton = document.getElementById("myBtn");
 // When scrolls down show the button
@@ -64,3 +66,40 @@ buttonLeft.onclick = function () {
   }
 };
 
+// Tab selection jquery
+$(document).ready(function(){
+	$('.owl-carousel').owlCarousel({
+	  loop:true,
+	  margin:0,
+	  items:1,
+  });
+  $("#orderhome .tab-head ul li a").on("click",function(){
+	var $this=$(this);
+	$("#orderhome .tab-head ul li a").removeClass("active");
+	$this.addClass("active");
+	$("#orderhome .order-option").removeClass("active");
+	$this.parent().addClass("active");
+
+	let clicked_tab=$this.data("id");
+	$(".tab-body div.items").removeClass("active");
+	$(`#${clicked_tab}`).addClass("active");
+  });
+  });
+
+  //sticky top jquery
+var fixmeTop = $('.tab-body .options').offset().top;     
+$(window).scroll(function() {                 
+    var currentScroll = $(window).scrollTop(); 
+    if (currentScroll >= fixmeTop) {           
+        $('.tab-body .options').css({                   
+            position: 'fixed',
+            top: '0',
+            zIndex: '10',
+            left: '0'
+        });
+    } else {                                   
+        $('.tab-body .options').css({                     
+            position: 'static'
+        });
+    }
+});
