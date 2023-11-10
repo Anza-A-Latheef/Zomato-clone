@@ -389,6 +389,15 @@ function selectCountry(){
     })
     const countryOptions = document.querySelectorAll('.cntryoption');
     countryOptions.forEach(cntryoption=> cntryoption.addEventListener('click',selectCountry));
+    
+    window.onclick = function(event) {
+      if (!event.target.matches('.countries-name')) {
+          var countryFlag = document.querySelector('.country-options');
+          if (countryFlag.classList.contains('active')) {
+              countryFlag.classList.remove('active');
+          }
+      }
+  }  
 
 //language selection option
 
@@ -474,3 +483,17 @@ $(document).ready(function(){
     items:4,
 });
 })
+
+//location dropdown in home spotlight section
+function droplocation() {
+  document.getElementById("locdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.location')) {
+      var dropdown = document.getElementById("locdown");
+      if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+      }
+  }
+}

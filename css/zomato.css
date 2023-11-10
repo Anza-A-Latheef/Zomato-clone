@@ -293,7 +293,7 @@ color: rgb(255, 255, 255);
     font-weight: lighter;
 }
 #pop-cover  #pop .create-account h6 span{
-    color: #330207;
+    color: #ef4f5f;
     cursor: pointer;
 }
 #signPop{
@@ -523,8 +523,6 @@ color: rgb(255, 255, 255);
     width:752px;
     height:55px;
 }
-
-
 #home .spotlight .home_input .location{
     display: flex;
     align-items: center;
@@ -550,6 +548,44 @@ color: rgb(255, 255, 255);
 #home .spotlight .home_input .location input::placeholder{
     font-size: 15px;
 }
+#home .spotlight .home_input .loc-down{
+    border: 1px solid #d2c8c8;
+    padding-left:20px ;
+    position: absolute;
+    align-items: center;
+    border-radius: 5px;
+    width: 350px;
+    height: 60px;
+    bottom: 255px;
+    background-color: white;
+    z-index: 1;
+    display: none;
+    box-shadow: 0 4px 8px 0 #928f8f33, 0 6px 20px 0 #928f8f33;
+}
+#home .show{
+    display: block;
+}
+#home .spotlight .home_input .loc-down.show {
+    display: flex;
+}
+#home .home_input .loc-down .loc-contents{
+    display: block;
+    margin-left: 15px;
+}
+#home .spotlight .home_input .loc-down .loc-contents h3{
+    color: #e03546;
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+#home .spotlight .home_input .loc-down .loc-contents h6{
+    line-height: 1.5em;
+    color: #524e4e;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
 #home .spotlight .home_input .search{
     padding:5px;
     display: flex;
@@ -1304,6 +1340,7 @@ footer .wrapper .copyright sup{
 #orderhome .wrapper header .home_input .location input::placeholder{
     font-size: 15px;
 }
+/* dropdown loaction in order home */
 #orderhome .wrapper header .home_input .loc-down{
     border: 1px solid #d2c8c8;
     padding-left:20px ;
@@ -1318,15 +1355,9 @@ footer .wrapper .copyright sup{
     display: none;
     box-shadow: 0 4px 8px 0 #928f8f33, 0 6px 20px 0 #928f8f33;
 }
-.fa-caret-down:hover{
-    rotate: 180deg;
-    transition: 0.3s;
-    margin-top: 20px;
-}
-.location:hover + .loc-down{
+#orderhome .wrapper header .home_input .loc-down.show {
     display: flex;
 }
-
 #orderhome .wrapper header .home_input .loc-down .loc-contents{
     display: block;
     margin-left: 15px;
@@ -1344,6 +1375,7 @@ footer .wrapper .copyright sup{
     font-size: 18px;
     font-weight: lighter;
 }
+/* dropdown loaction in order home ends..............*/
 #orderhome .wrapper header .home_input .search{
     padding:5px;
     display: flex;

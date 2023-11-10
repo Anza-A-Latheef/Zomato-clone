@@ -66,6 +66,20 @@ buttonLeft.onclick = function () {
   }
 };
 
+//orderhome location dropdown
+function droplocation() {
+    document.getElementById("locdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.location')) {
+        var dropdown = document.getElementById("locdown");
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
+}
+
 // Tab selection jquery
 $(document).ready(function(){
 	$('.owl-carousel').owlCarousel({
