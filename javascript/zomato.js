@@ -260,8 +260,6 @@ const countries=[
       document.getElementById("signPop").style.visibility="visible";
       document.body.style.overflow="hidden";
       document.getElementById("signup").style.transform="scale(1)";
-      // document.getElementById("signup").style.transition="1s ease-in";
-      // document.getElementById("signup").style.transitionDelay="1s";
   };
   //close signup-popup
   function closeSignup(){
@@ -326,7 +324,6 @@ for (let i = 0; i <= coll.length -1; i++) {
     }
   });
 }
-
 
 //country selection in footer section
 
@@ -462,7 +459,7 @@ const phone_change=`
         <input type="submit" name="share" id="share" value="Share App Link"/>
     </div>`;
 
-    // get input select
+// get input select
 const custom_fill=document.getElementsByClassName('fill');
 const mail_input=document.getElementById('mail');
 const custom_select=document.getElementsByClassName('select');
@@ -488,7 +485,6 @@ $(document).ready(function(){
 function droplocation() {
   document.getElementById("locdown").classList.toggle("show");
 }
-
 window.onclick = function(event) {
   if (!event.target.matches('.location')) {
       var dropdown = document.getElementById("locdown");
